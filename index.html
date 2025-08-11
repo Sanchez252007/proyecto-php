@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Alumnos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input[type="submit"],
+    .link-button {
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .link-button:hover,
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Registro de Alumnos</h2>
+    <form action="pagina2.php" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" id="nombre" required>
+
+      <label for="mail">Correo:</label>
+      <input type="email" name="mail" id="mail" required>
+
+      <label for="codigocurso">Curso:</label>
+      <select name="codigocurso" id="codigocurso" required>
+        <option value="1">PHP</option>
+        <option value="2">ASP</option>
+        <option value="3">JSP</option>
+      </select>
+
+      <div class="button-container">
+        <input type="submit" value="Registrar">
+        <a href="pagina3.php" class="link-button">Ver Alumnos</a>
+        <a href="FormularioPara_borrarCurso.html" class="link-button">Borrar Curso</a>
+        <a href="EliminarAlumno.php" class="link-button">Eliminar Alumno</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
